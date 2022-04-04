@@ -11,7 +11,9 @@
     "connect_channels": "DEBUG=smartglass:* ./examples/connect_channels.js",
     "connect_disconnect": "DEBUG=smartglass:* ./examples/connect_and_disconnect.js",
     "poweron": "DEBUG=smartglass:* ./examples/poweron.js",
-    "poweroff": "DEBUG=smartglass:* ./examples/poweroff.js"
+    "poweroff": "DEBUG=smartglass:* ./examples/poweroff.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -35,10 +37,12 @@
     "hex-to-binary": "^1.0.1",
     "jsrsasign": "^8.0.13",
     "uuid": "^3.4.0",
-    "uuid-parse": "^1.1.0"
+    "uuid-parse": "^1.1.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
+    "mocha": "^6.2.3",
     "nyc": "^13.3.0"
-  }
+  },
+  "snyk": true
 }
